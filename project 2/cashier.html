@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>We sell guns!</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial scale = 1.0">
+</head>
+
+<body>
+	<h1><center>Shady neighbourhood family-friendly market!</center></h1>
+
+	<p><center>It will be our tiny little secret! Dont tell anyone!</center></p>
+	<br>
+	<br>
+	<div class="row">
+		<div class="coloumn">
+			Request new item!
+			<br>
+			<form>
+				<input type="text" name="itemName" id="itemName" placeholder="Weapon's name" required>
+				<input type="number" name="itemNumber" id="itemNumber" placeholder="Price" required min="1">
+			</form>
+			<button onclick="addItem()">Request</button>
+		</div>
+	</div>
+	<br>
+	<form>
+		Input Weapon!
+		<br>
+		<input type="text" id="itemText" placeholder="Click on the List" disabled="disabled">
+		<input type="text" id="itemPrice" onkeyup="calc(this.form)" name="itemPrice" placeholder="Price" readonly="readonly">
+		<input type="number" id="itemAmount" name="itemAmount" onkeyup="calc(this.form)" placeholder="Qty" min="1" max="20" required="required">
+		<input type="number" id="finalPrice" name="finalPrice" onkeyup="calc(this.form)" readonly="readonly">
+	</form>
+	<button onclick="addData()">Buy</button>
+	<br>
+	<br>
+	<div class="coloumn">
+		Item List
+		<table id="myTable">
+			<tbody>
+				<tr>
+					<td>Tocachev</td>
+					<td>1400</td>
+				</tr>
+				<tr>
+					<td>Branco Sabbath</td>
+					<td>12800</td>
+				</tr>
+				<tr>
+					<td>Starridge</td>
+					<td>3000</td>
+				</tr>
+				<tr>
+					<td>Sabazios</td>
+					<td>30000</td>
+				</tr>
+				<tr>
+					<td>Death Contract</td>
+					<td>50000</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<br>
+	<div>
+		<br>
+		Bring all your money!
+		<br>
+		<input type="number" id="totalPrice" name="totalPrice" onkeyup="calcd(this.form)" placeholder="Total Price" disabled="disabled">
+		<br>
+		Discount!
+		<br>
+		<input type="number" name="discount" id="discount" onkeyup="calcd(this.form)" placeholder="Discount">
+		<br>
+		Price after discount!
+		<br>
+		<input type="number" name="totalPriced" id="totalPriced" onkeyup="calcd(this.form)" disabled="disabled">
+		<br>
+		Amount to pay!
+		<br>
+		<input type="number" name="payment" id="payment" onkeyup="calcd(this.form)" placeholder="Payment">
+		<br>
+		Change!
+		<br>
+		<input type="number" name="change" id="change" onkeyup="calcd(this.form)" placeholder="Change">
+	</div>
+	<br>
+	<table style="width: 100%" id="mainTable">
+		<tbody>
+			<tr>
+				<th>No</th>
+				<th>Item</th>
+				<th>Price</th>
+				<th>Amount</th>
+				<th>Total Price</th>
+			</tr>
+		</tbody>
+	</table>
+	<script src="script.js"></script>
+</body>
+</html>
